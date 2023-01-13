@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "fbd51ef5-0f9a-48fb-a911-16911f31cd1e",
+		"name": "ECOM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22128163"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8500/ecom/category/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0MTU2LCJqdGkiOiJiYzY5MGViYTNmZTg0ZTgzODc1ODMzOWQ5MjdiODUwNCIsInVzZXJfaWQiOjN9.npjHRVlqQE5__6fd7m0jvHRgpVieXIwon96rwfOESWQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Testing\",\n    \"image\": null,\n    \"parent\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/category/"
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzgyMzExLCJqdGkiOiI4OTlhODdlM2YxMGE0MDFmODIzOTMxNzZlZTM2ODhiNSIsInVzZXJfaWQiOjN9.PUj6gmqvE9z0LQDhjoE2Z0Uq9k9bYxCcMxRC31LRing"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 2,\n        \"title\": \"fd\",\n        \"description\": \"test\",\n        \"discount_price\": 15,\n        \"price\": 10,\n        \"image_1\": null,\n        \"image_2\": null,\n        \"image_3\": null,\n        \"image_4\": null,\n        \"image_5\": null,\n        \"image_6\": null,\n        \"image_7\": null,\n        \"image_8\": null,\n        \"image_9\": null,\n        \"image_10\": null,\n        \"is_best\": false,\n        \"is_best_selling\": false,\n        \"tags\": \"Test\",\n        \"brand\": null,\n        \"is_premium\": false,\n        \"ratings\": 4.9,\n        \"total_available\": 0,\n        \"total_count\": 0,\n        \"availablity\": \"IN STOCK\",\n        \"user\": 3,\n        \"category\": [\n            1\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/product/"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzgyMzExLCJqdGkiOiI4OTlhODdlM2YxMGE0MDFmODIzOTMxNzZlZTM2ODhiNSIsInVzZXJfaWQiOjN9.PUj6gmqvE9z0LQDhjoE2Z0Uq9k9bYxCcMxRC31LRing"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 2,\n        \"title\": \"fd\",\n        \"description\": \"test\",\n        \"discount_price\": 15,\n        \"price\": 10,\n        \"image_1\": null,\n        \"image_2\": null,\n        \"image_3\": null,\n        \"image_4\": null,\n        \"image_5\": null,\n        \"image_6\": null,\n        \"image_7\": null,\n        \"image_8\": null,\n        \"image_9\": null,\n        \"image_10\": null,\n        \"is_best\": false,\n        \"is_best_selling\": false,\n        \"tags\": \"Test\",\n        \"brand\": null,\n        \"is_premium\": false,\n        \"ratings\": 4.9,\n        \"total_available\": 0,\n        \"total_count\": 0,\n        \"availablity\": \"IN STOCK\",\n        \"user\": 3,\n        \"category\": [\n            1\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/product/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit All Product Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzgyMzExLCJqdGkiOiI4OTlhODdlM2YxMGE0MDFmODIzOTMxNzZlZTM2ODhiNSIsInVzZXJfaWQiOjN9.PUj6gmqvE9z0LQDhjoE2Z0Uq9k9bYxCcMxRC31LRing"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 2,\n        \"title\": \"fd\",\n        \"description\": \"test\",\n        \"discount_price\": 15,\n        \"price\": 10,\n        \"image_1\": null,\n        \"image_2\": null,\n        \"image_3\": null,\n        \"image_4\": null,\n        \"image_5\": null,\n        \"image_6\": null,\n        \"image_7\": null,\n        \"image_8\": null,\n        \"image_9\": null,\n        \"image_10\": null,\n        \"is_best\": false,\n        \"is_best_selling\": false,\n        \"tags\": \"Test\",\n        \"brand\": null,\n        \"is_premium\": false,\n        \"ratings\": 4.9,\n        \"total_available\": 0,\n        \"total_count\": 0,\n        \"availablity\": \"IN STOCK\",\n        \"user\": 3,\n        \"category\": [\n            1\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/product/"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Any Product Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzgyMzExLCJqdGkiOiI4OTlhODdlM2YxMGE0MDFmODIzOTMxNzZlZTM2ODhiNSIsInVzZXJfaWQiOjN9.PUj6gmqvE9z0LQDhjoE2Z0Uq9k9bYxCcMxRC31LRing"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 2,\n        \"title\": \"fd\",\n        \"description\": \"test\",\n        \"discount_price\": 15\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/product/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8500/ecom/product/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "My Product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Product Review",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\" : 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/review/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product Review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0OTc4LCJqdGkiOiJmMmNhMThmYjA3OTQ0NGM4YWQ3M2FiMzFkZjgyNzQwOSIsInVzZXJfaWQiOjN9.N0gJyLgQkPGC8WE_C9Xqpn9hdxw-7p6iKA_RciVokeY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mobile\" : \"8534867764\",\n    \"product_id\" : 3,\n    \"name\" : \"Danish\",\n    \"email\" : \"alidanish@gmail.com\",\n    \"review_msg\" : \"This is Very Good Product\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/review/"
+			},
+			"response": []
+		},
+		{
+			"name": "My Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0OTc4LCJqdGkiOiJmMmNhMThmYjA3OTQ0NGM4YWQ3M2FiMzFkZjgyNzQwOSIsInVzZXJfaWQiOjN9.N0gJyLgQkPGC8WE_C9Xqpn9hdxw-7p6iKA_RciVokeY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8500/ecom/cart/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add To Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0OTc4LCJqdGkiOiJmMmNhMThmYjA3OTQ0NGM4YWQ3M2FiMzFkZjgyNzQwOSIsInVzZXJfaWQiOjN9.N0gJyLgQkPGC8WE_C9Xqpn9hdxw-7p6iKA_RciVokeY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\":1,\n    \"hint\" : \"firstcart\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/cart/"
+			},
+			"response": []
+		},
+		{
+			"name": "Increment Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0OTc4LCJqdGkiOiJmMmNhMThmYjA3OTQ0NGM4YWQ3M2FiMzFkZjgyNzQwOSIsInVzZXJfaWQiOjN9.N0gJyLgQkPGC8WE_C9Xqpn9hdxw-7p6iKA_RciVokeY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\":1,\n    \"hint\" : \"increment-cart\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/cart/"
+			},
+			"response": []
+		},
+		{
+			"name": "Decrement Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0OTc4LCJqdGkiOiJmMmNhMThmYjA3OTQ0NGM4YWQ3M2FiMzFkZjgyNzQwOSIsInVzZXJfaWQiOjN9.N0gJyLgQkPGC8WE_C9Xqpn9hdxw-7p6iKA_RciVokeY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\":1,\n    \"hint\" : \"decrement-cart\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/cart/"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0OTc4LCJqdGkiOiJmMmNhMThmYjA3OTQ0NGM4YWQ3M2FiMzFkZjgyNzQwOSIsInVzZXJfaWQiOjN9.N0gJyLgQkPGC8WE_C9Xqpn9hdxw-7p6iKA_RciVokeY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\":1,\n    \"hint\" : \"remove\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/cart/"
+			},
+			"response": []
+		},
+		{
+			"name": "Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg2MjA0LCJqdGkiOiJmOTI3NzMxMTBlNjg0NTBiYTk0ZDJlN2YwYjUxZTM0NiIsInVzZXJfaWQiOjN9.e56FY10P9Fn75WY0ooVAFiDe8uYAXowTkREVPsbRQ7w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8500/ecom/customer/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg2MjA0LCJqdGkiOiJmOTI3NzMxMTBlNjg0NTBiYTk0ZDJlN2YwYjUxZTM0NiIsInVzZXJfaWQiOjN9.e56FY10P9Fn75WY0ooVAFiDe8uYAXowTkREVPsbRQ7w"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": 1,\n    \"country\": \"India\",\n    \"first_name\": \"Danish\",\n    \"last_name\": \"Ali\",\n    \"company_name\": \"Nothing\",\n    \"address_street\": \"Near\",\n    \"address_optional\": \"No\",\n    \"city\": \"Kashiri gate\",\n    \"states\": \"Delhi\",\n    \"zip_code\": \"123456\",\n    \"email\": \"dk@gmail.com\",\n    \"phone\": \"1234567899\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/customer/"
+			},
+			"response": []
+		},
+		{
+			"name": "Billing or Checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg0OTc4LCJqdGkiOiJmMmNhMThmYjA3OTQ0NGM4YWQ3M2FiMzFkZjgyNzQwOSIsInVzZXJfaWQiOjN9.N0gJyLgQkPGC8WE_C9Xqpn9hdxw-7p6iKA_RciVokeY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mode\": \"CASH\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/billing/"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg3MTI4LCJqdGkiOiIwYThmMTdiNzk0YmY0YzAwYjRiNmM1NGU2NDIzMzNmMiIsInVzZXJfaWQiOjN9.niCCkwsUopl-1DzNZiTe32uu-36DrPLEksQ10J1_85k"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"razorpay_orderId\": \"\",\n    \"razorpay_paymentId\": \"\",\n    \"razorpay_signature\": \"\",\n    \"price\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/ecom/payment/"
+			},
+			"response": []
+		},
+		{
+			"name": "Placed Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMzg3MTI4LCJqdGkiOiIwYThmMTdiNzk0YmY0YzAwYjRiNmM1NGU2NDIzMzNmMiIsInVzZXJfaWQiOjN9.niCCkwsUopl-1DzNZiTe32uu-36DrPLEksQ10J1_85k"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8500/ecom/place-order/"
+			},
+			"response": []
+		}
+	]
+}

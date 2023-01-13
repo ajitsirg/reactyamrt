@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "ff1b5d5f-9b77-488d-b95a-d49de3ca16a3",
+		"name": "DjangoAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22128163"
+	},
+	"item": [
+		{
+			"name": "UserRegistration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"username\": \"8534867764\",\n    \"password\": \"admin@123\",\n    \"confirm_password\": \"admin@123\",\n    \"email\": \"danish@webllisto.com\",\n    \"first_name\": \"Danish\",\n    \"last_name\": \"Ali\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/auth/registration/"
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\":\"8534867764\",\n    \"password\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://3.110.167.166:8500/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "UserProfile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzIyNTA5LCJqdGkiOiJkYTg1OWYyYjc1OTc0NjJjODBkMjk2OTVlYTJjZjQzYiIsInVzZXJfaWQiOjl9.cBBu1RnBz-EGk0u9a91_JVBUVxVqOCmswK94gcRAnTg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/auth/profile/"
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzIwOTU1LCJqdGkiOiI1Zjg1NTUxNzlkYjQ0ZmZhYmUxYTczOWY4NzljYTA4ZSIsInVzZXJfaWQiOjF9.HS87zeZXgbWwHrgAH_YCliLlikEuzBqoBrJPOtULrbQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"admin@12\",\n    \"confirm_password\":\"admin@12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/auth/changepassword/"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Reset Password Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"danish@webllisto.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8500/auth/send-reset-password-email/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8500",
+					"path": [
+						"auth",
+						"send-reset-password-email",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"admin@12\",\n    \"confirm_password\":\"admin@12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8500/auth/reset-password/OQ/62m-59268943d610d3a71a4d/\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8500",
+					"path": [
+						"auth",
+						"reset-password",
+						"OQ",
+						"62m-59268943d610d3a71a4d",
+						"\n"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerifyOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\" : \"8534867764\",\n    \"otp\" : \"234344\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8500/auth/verify-otp/"
+			},
+			"response": []
+		}
+	]
+}
